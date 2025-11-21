@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="StructureData" load_steps=2 format=3 uid="uid://c2c8xjgfjrjoi"]
+
+[ext_resource type="Script" path="res://Scripts/Structure/StructureData.cs" id="1_7upc6"]
+
+[resource]
+script = ExtResource("1_7upc6")
+name = "Structure1"
+spritePath = "res://Textures/icon.svg"
+hp = 365

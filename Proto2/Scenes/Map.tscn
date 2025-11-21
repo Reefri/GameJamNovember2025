@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://dugfwk5k0vxvt"]
+
+[ext_resource type="PackedScene" uid="uid://d1jue4qjromg2" path="res://Scenes/Room.tscn" id="1_vjmdt"]
+[ext_resource type="PackedScene" uid="uid://d0ytc0h5bq5lf" path="res://Scenes/Corridor.tscn" id="2_7kkq5"]
+[ext_resource type="Resource" uid="uid://b4nvy1mqdik6p" path="res://Resources/Structure/Structure_1.tres" id="2_cu7mo"]
+[ext_resource type="Resource" uid="uid://c2c8xjgfjrjoi" path="res://Resources/Structure/structure_2.tres" id="3_uvien"]
+
+[node name="Map" type="Node2D"]
+
+[node name="Room_1" parent="." instance=ExtResource("1_vjmdt")]
+position = Vector2(-3, -1)
+rotation = 0.00279975
+scale = Vector2(3.79433, 2.83621)
+structure = Array[Object]([ExtResource("2_cu7mo"), ExtResource("3_uvien")])
+
+[node name="Structure_1" parent="Room_1/StructuresContainer" index="0"]
+position = Vector2(27.4093, -31.0273)
+
+[node name="Structure_2" parent="Room_1/StructuresContainer" index="1"]
+position = Vector2(-33.7345, 26.7963)
+
+[node name="Room_2" parent="." instance=ExtResource("1_vjmdt")]
+position = Vector2(-436, 277)
+
+[node name="Room_3" parent="." instance=ExtResource("1_vjmdt")]
+position = Vector2(467, -242)
+
+[node name="Room_4" parent="." instance=ExtResource("1_vjmdt")]
+position = Vector2(447, 257)
+
+[node name="Corridor" parent="." instance=ExtResource("2_7kkq5")]
+position = Vector2(297, 182)
+rotation = 0.409965
+
+[node name="Corridor2" parent="." instance=ExtResource("2_7kkq5")]
+position = Vector2(-287, 184)
+rotation = -0.450384
+
+[node name="Corridor3" parent="." instance=ExtResource("2_7kkq5")]
+position = Vector2(310, -167)
+rotation = -0.352054
+
+[editable path="Room_1"]
+[editable path="Room_2"]
+[editable path="Room_3"]
+[editable path="Room_4"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi5usqdpo4upk"]
+
+[ext_resource type="Script" path="res://Scripts/Main.cs" id="1_4rvyg"]
+[ext_resource type="Texture2D" uid="uid://cddcusoahnm5c" path="res://Textures/icon.svg" id="1_bav60"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_4rvyg")
+
+[node name="BackGround" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(520, 297)
+scale = Vector2(14.2813, 10.4375)
+texture = ExtResource("1_bav60")

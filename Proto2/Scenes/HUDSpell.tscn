@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bilvflrriibvj"]
+
+[ext_resource type="Script" path="res://Scripts/HUDSpell.cs" id="1_ax2i4"]
+[ext_resource type="Texture2D" uid="uid://cddcusoahnm5c" path="res://Textures/icon.svg" id="2_ih2me"]
+
+[node name="HUDSpell" type="Node2D"]
+script = ExtResource("1_ax2i4")
+
+[node name="SpellButton" type="Button" parent="."]
+offset_left = -60.0
+offset_top = -61.0
+offset_right = 60.0
+offset_bottom = 60.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ih2me")

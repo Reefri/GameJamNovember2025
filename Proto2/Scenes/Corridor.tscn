@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0ytc0h5bq5lf"]
+
+[ext_resource type="Texture2D" uid="uid://cddcusoahnm5c" path="res://Textures/icon.svg" id="1_2gcjc"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_jdn5i"]
+vertices = PackedVector2Array(115, 31, -115, 33, -115, -35, 115, -35)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-146, -45, 153, -46, 151, 39, -147, 40)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+
+[node name="Corridor" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-06, 0)
+scale = Vector2(1.78125, 0.578125)
+texture = ExtResource("1_2gcjc")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_jdn5i")

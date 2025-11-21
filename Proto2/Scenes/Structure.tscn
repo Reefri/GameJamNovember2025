@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnnrpfa41t6lh"]
+
+[ext_resource type="Script" path="res://Scripts/Structure/Structure.cs" id="1_rtbyt"]
+[ext_resource type="Texture2D" uid="uid://cddcusoahnm5c" path="res://Textures/icon.svg" id="2_dpgcm"]
+
+[node name="Structure" type="Node2D"]
+scale = Vector2(-0.175744, 0.12329)
+script = ExtResource("1_rtbyt")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 0.419608, 1)
+position = Vector2(-1, -51)
+scale = Vector2(0.539063, 1)
+texture = ExtResource("2_dpgcm")

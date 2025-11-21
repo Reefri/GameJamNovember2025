@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="StructureData" load_steps=2 format=3 uid="uid://b4nvy1mqdik6p"]
+
+[ext_resource type="Script" path="res://Scripts/Structure/StructureData.cs" id="1_1eknm"]
+
+[resource]
+script = ExtResource("1_1eknm")
+name = "Structure_2"
+hp = 93

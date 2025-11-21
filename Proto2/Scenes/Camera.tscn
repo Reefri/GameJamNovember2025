@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cttdylsq8x16f"]
+
+[ext_resource type="Script" path="res://Scripts/Camera.cs" id="1_4yxig"]
+[ext_resource type="PackedScene" uid="uid://cwklbihs46icx" path="res://Scenes/HUD.tscn" id="2_76x5b"]
+
+[node name="Camera" type="Camera2D"]
+script = ExtResource("1_4yxig")
+
+[node name="HUD" parent="." instance=ExtResource("2_76x5b")]
