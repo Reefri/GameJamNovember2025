@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bcbby6tmketel"]
+
+[node name="EnemyContainer" type="Node2D"]

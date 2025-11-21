@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bar351k8a8pg8"]
+
+[ext_resource type="Script" path="res://Scripts/EnemySpawner.cs" id="1_62brx"]
+[ext_resource type="Texture2D" uid="uid://cddcusoahnm5c" path="res://Textures/icon.svg" id="2_fsokr"]
+[ext_resource type="Resource" uid="uid://dxmwd5hv0256e" path="res://Resources/Enemy/Enemy_1.tres" id="2_rkam8"]
+
+[node name="EnemySpawner" type="Node2D" node_paths=PackedStringArray("enemySpawnTimer")]
+script = ExtResource("1_62brx")
+enemies = Array[Object]([ExtResource("2_rkam8")])
+enemySpawnTimer = NodePath("enemySpawnTimer")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.603922, 0.0823529, 0.490196, 1)
+texture = ExtResource("2_fsokr")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="enemySpawnTimer" type="Timer" parent="."]
+one_shot = true

@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1jue4qjromg2"]
+
+[ext_resource type="Script" path="res://Scripts/Room.cs" id="1_2sd6u"]
+[ext_resource type="Texture2D" uid="uid://cddcusoahnm5c" path="res://Textures/icon.svg" id="1_iwr7g"]
+[ext_resource type="PackedScene" uid="uid://bar351k8a8pg8" path="res://Scenes/EnemySpawner.tscn" id="2_ubjvy"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_br46b"]
+vertices = PackedVector2Array(56, 54, -52, 55, -52, -56, 56, -56)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-63, -67, 67, -66, 66, 64, -62, 66)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+
+[node name="Room" type="Node2D"]
+script = ExtResource("1_2sd6u")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_iwr7g")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_br46b")
+
+[node name="Structures" type="Node2D" parent="."]
+
+[node name="Structure_1" type="Marker2D" parent="Structures"]
+position = Vector2(4, 4)
+
+[node name="Structure_2" type="Marker2D" parent="Structures"]
+position = Vector2(-4, -4)
+
+[node name="EnemySpawners" type="Node2D" parent="."]
+
+[node name="EnemySpawner1" parent="EnemySpawners" instance=ExtResource("2_ubjvy")]
+position = Vector2(-45, -49)
+scale = Vector2(0.25, 0.25)
+
+[node name="EnemySpawner2" parent="EnemySpawners" node_paths=PackedStringArray("enemySpawnTimer") instance=ExtResource("2_ubjvy")]
+position = Vector2(49, 47)
+scale = Vector2(0.25, 0.25)
+enemySpawnTimer = NodePath("../EnemySpawner1/enemySpawnTimer")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=3 format=3 uid="uid://dxmwd5hv0256e"]
+
+[ext_resource type="Script" path="res://Scripts/Enemies/EnemyData.cs" id="1_6knoj"]
+[ext_resource type="Texture2D" uid="uid://c5tgra82b18av" path="res://Textures/super_poulet.png" id="2_sptfy"]
+
+[resource]
+script = ExtResource("1_6knoj")
+hp = 100.0
+speed = 50.0
+texture = ExtResource("2_sptfy")
+type = 0
